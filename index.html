@@ -2,22 +2,12 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="root" class="am-container am-text-center am-vertical-align screen-height">
+  <div class="am-vertical-align-middle">
+    <img class="am-round am-margin-top" src="{{ "/assets/avatar.jpg" | prepend: site.baseurl }}">
+    <h1 class="am-text-center am-margin">{{ site.title }}</h1>
+    <hr>
+    <p>Better to light a candle than to curse the darkness.</p>
+    <hr>
+  </div>
 </div>
