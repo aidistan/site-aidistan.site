@@ -1,13 +1,32 @@
 ---
 ---
 
-.am-container {
-  max-width: 550px;
+.zh {
+  font-size: 100%;
+  color: #666;
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 550px;
+  height: 100%;
+  margin: 0 auto;
+
+  justify-content: center;
+  align-items: center;
+
   img {
     width: 150px;
     height: 150px;
+  }
+
+  p {
+    padding: 10px;
+    text-align: center;
+
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
   }
 }
