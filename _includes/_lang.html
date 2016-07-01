@@ -1,0 +1,21 @@
+<a id="lang" class="am-btn am-btn-default am-round">
+  <span class="en">汉</span>
+  <span class="zh">En</span>
+</a>
+
+<script>
+  var lang = /lang=(\w+)/.exec(window.location.search)
+  lang = lang === null ? 'en' : lang[1]
+
+  if (lang === 'zh') {
+    document.write('<style>.en { display: none; }</style>')
+    document.getElementById('lang').onclick = function () {
+      window.location.href = window.location.href.split('?')[0] + '?lang=en'
+    }
+  } else {
+    document.write('<style>.zh { display: none; }</style>')
+    document.getElementById('lang').onclick = function () {
+      window.location.href = window.location.href.split('?')[0] + '?lang=zh'
+    }
+  }
+</script>

@@ -1,16 +1,28 @@
 ---
 ---
 
-.zh {
-  font-size: 100%;
-  color: #666;
+.am-btn-default {
+  border: solid 1px #eee;
+  background-color: transparent;
+}
+
+.am-btn-default:hover,
+.am-btn-default:focus {
+  border: solid 1px #aaa;
+  background-color: transparent;
+}
+
+#lang {
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
 
-  max-width: 550px;
+  max-width: 450px;
   height: 100%;
   margin: 0 auto;
 
@@ -23,7 +35,9 @@
   }
 
   p {
+    width: 100%;
     padding: 10px;
+
     text-align: center;
 
     border-top: solid 1px #eee;
