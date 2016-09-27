@@ -2,37 +2,62 @@
 layout: default
 ---
 
+<img class="am-round am-margin-top" src="{{ "/assets/avatar.jpg" | prepend: site.baseurl }}">
+<h1 class="am-text-center am-margin">
+  <span class="en">{{ site.title }}</span>
+  <span class="zh">谭艾迪</span>
+</h1>
+<p>
+  <span class="en">Better to light one candle than to curse the darkness.</span>
+  <span class="zh">与其诅咒黑暗，不如点亮荧烛</span>
+</p>
+<div class="am-margin-top-sm">
+  <a class="am-btn am-btn-default am-round am-margin-horizontal-sm" href="http://blog.aiditan.me/" target="_blank">
+    <span class="am-icon-pencil-square-o">&nbsp;</span>
+    <span class="en">Posts</span>
+    <span class="zh">博文</span>
+  </a>
+  <a class="am-btn am-btn-default am-round am-margin-horizontal-sm" href="https://github.com/aidistan/" target="_blank">
+    <span class="am-icon-code">&nbsp;</span>
+    <span class="en">Codes</span>
+    <span class="zh">代码</span>
+  </a>
+  <a class="am-btn am-btn-default am-round am-margin-horizontal-sm" href="http://photo.aiditan.me/" target="_blank">
+    <span class="am-icon-picture-o">&nbsp;</span>
+    <span class="en">Photos</span>
+    <span class="zh">摄影</span>
+  </a>
+</div>
+
 <style>
 html, body {
   height: 100%;
 }
-</style>
 
-<div id="root">
-  <img class="am-round am-margin-top" src="{{ "/assets/avatar.jpg" | prepend: site.baseurl }}">
-  <h1 class="am-text-center am-margin">
-    <span class="en">{{ site.title }}</span>
-    <span class="zh">谭艾迪</span>
-  </h1>
-  <p>
-    <span class="en">Better to light one candle than to curse the darkness.</span>
-    <span class="zh">与其诅咒黑暗，不如点亮荧烛</span>
-  </p>
-  <div class="am-margin-top-sm">
-    <a class="am-btn am-btn-default am-round am-margin-horizontal-sm" href="http://blog.aiditan.me/" target="_blank">
-      <span class="am-icon-pencil-square-o">&nbsp;</span>
-      <span class="en">Posts</span>
-      <span class="zh">博文</span>
-    </a>
-    <a class="am-btn am-btn-default am-round am-margin-horizontal-sm" href="https://github.com/aidistan/" target="_blank">
-      <span class="am-icon-code">&nbsp;</span>
-      <span class="en">Codes</span>
-      <span class="zh">代码</span>
-    </a>
-    <a class="am-btn am-btn-default am-round am-margin-horizontal-sm" href="http://photo.aiditan.me/" target="_blank">
-      <span class="am-icon-picture-o">&nbsp;</span>
-      <span class="en">Photos</span>
-      <span class="zh">摄影</span>
-    </a>
-  </div>
-</div>
+#content {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 450px;
+  height: 100%;
+  margin: 0 auto;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#content img {
+  width: 150px;
+  height: 150px;
+}
+
+#content p {
+  width: 100%;
+  padding: 10px;
+
+  text-align: center;
+
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+</style>

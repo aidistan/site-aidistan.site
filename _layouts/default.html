@@ -25,9 +25,11 @@
   <body>
     {% include _lang.html %}
 
-    {{ content }}
+    <div id="content">
+      {{ content }}
+    </div>
 
-    <script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js"></script>
     <script src="{{ "/assets/main.js" | prepend: site.baseurl }}"></script>
   </body>
