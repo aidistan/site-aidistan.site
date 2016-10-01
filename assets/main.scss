@@ -12,8 +12,13 @@
   background-color: transparent;
 }
 
+.am-text-grey {
+  color: #A6A6A6;
+}
+
 #lang {
   position: fixed;
   top: 10px;
   right: 10px;
+  z-index: 999;
 }
