@@ -99,11 +99,14 @@ layout: default
     <span class="en">Selected Projects</span>
   </h2>
   <hr>
-  <div id="projects" class="am-g am-margin-bottom-lg">
-    <div class="am-u-sm-12" v-show="projects.length === 0">
+  <div id="projects" class="am-margin-bottom-lg">
+    <div v-show="projects.length === 0">
       <i class="am-icon-spinner am-icon-pulse am-margin-right-sm"></i> Loading...
     </div>
-    <project v-for="project in projects" :project="project"></project>
+    <div class="am-g" v-for="pair in projectPairs">
+      <project class="am-u-sm-12 am-u-md-6 am-margin-bottom-lg" :project="pair[0]"></project>
+      <project class="am-u-sm-12 am-u-md-6 am-margin-bottom-lg" :project="pair[1]" v-if="pair[1]"></project>
+    </div>
   </div>
 </div>
 
@@ -114,7 +117,7 @@ layout: default
 <script>
 Vue.component('project', {
   template: '\
-<div class="am-u-sm-12 am-u-md-6 am-margin-bottom-lg">\
+<div class="project">\
   <div class="am-text-lg am-margin-bottom-sm">\
     <span class="zh">{{ project.title.zh }}</span>\
     <span class="en">{{ project.title.en }}</span>\
@@ -143,6 +146,15 @@ new Vue({
   data: function () {
     return {
       projects: []
+    }
+  },
+  computed: {
+    projectPairs: function () {
+      pairs = []
+      for (let i = 0; i < this.projects.length; i += 2) {
+        pairs.push([this.projects[i], this.projects[i+1]])
+      }
+      return pairs
     }
   },
   created: function () {
