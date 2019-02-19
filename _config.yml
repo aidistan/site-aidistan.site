@@ -1,15 +1,9 @@
 # Site settings
 title: Aidi Tan
-email: aidistan@live.cn
-description: >
-  I'm on my way to be an avid reader, a prolific writer, an experienced
-  programmer, a medical researcher and a keen photographer. I wish to build
-  something great to make this world a better place.
-baseurl: ""
+email: aidistan@163.com
+description: Better to light one candle than to curse the darkness.
 url: "http://aidistan.site"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
-
-# Serve settings
-port: 8080
