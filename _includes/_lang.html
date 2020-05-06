@@ -4,18 +4,18 @@
 </a>
 
 <script>
-  var lang = /lang=(\w+)/.exec(window.location.search)
-  lang = lang === null ? 'en' : lang[1]
+  Object.defineProperty(window, "lang", {
+    set (lang) {
+      let body = document.getElementsByTagName('body')[0]
+      body.classList.remove('en', 'zh')
+      body.classList.add(lang)
 
-  if (lang === 'zh') {
-    document.write('<style>.en { display: none; }</style>')
-    document.getElementById('lang').onclick = function () {
-      window.location.href = window.location.href.split('?')[0] + '?lang=en'
+      document.getElementById('lang').onclick = () => {
+        window.lang = lang === 'zh' ? 'en' : 'zh'
+      }
     }
-  } else {
-    document.write('<style>.zh { display: none; }</style>')
-    document.getElementById('lang').onclick = function () {
-      window.location.href = window.location.href.split('?')[0] + '?lang=zh'
-    }
-  }
+  })
+
+  let match = /lang=(\w+)/.exec(window.location.search)
+  lang = match === null ? 'en' : match[1]
 </script>

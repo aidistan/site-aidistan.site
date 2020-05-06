@@ -16,9 +16,17 @@
   color: #A6A6A6;
 }
 
-#lang {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 999;
+body {
+  .en,
+  .zh { display: none; }
+
+  &.en .en,
+  &.zh .zh { display: inherit; }
+
+  #lang {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
 }
