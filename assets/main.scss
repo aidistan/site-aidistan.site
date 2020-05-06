@@ -21,7 +21,7 @@ body {
   .zh { display: none; }
 
   &.en .en,
-  &.zh .zh { display: inherit; }
+  &.zh .zh { display: initial; }
 
   #lang {
     position: fixed;
